@@ -7,6 +7,4 @@ import { importMovies } from "./modules/importer.js";
 
 const db = getFirestore(initializeApp(firebaseConfig));
 
-const buttonLoader = document.querySelector(".movies button");
-
-buttonLoader.addEventListener("click", async () => await importMovies(db));
+document.querySelector(".importer button").addEventListener("click", async () => await importMovies(db));
